@@ -1,0 +1,358 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.main-header {
+    background-color: #004080;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px; 
+    
+}
+
+
+
+.gradient-bar {
+    height: 15px;
+    background: linear-gradient(to right, #004080, #00BFFF, #FFA500); /* Degradado entre colores */
+}
+
+/* Estilos para el logo */
+.logo img {
+    max-width: 180px; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block; 
+}
+.logo h1 {
+    margin: 0;
+    font-size: 42px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Enlaces del header */
+.nav-left, .nav-right {
+    flex: 1;
+}
+
+.nav-left ul, .nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left ul {
+    justify-content: flex-start;
+}
+
+.nav-right ul {
+    justify-content: flex-end;
+}
+
+.nav-left ul li a, .nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #00BFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-left ul li a:hover, .nav-right ul li a:hover {
+    background-color: #00BFFF;
+}
+
+/* Botón "Agendar Cita" */
+.nav-right ul li a.agendar-cita {
+    background-color: #FFA500;
+    border-color: #FFA500;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-right ul li a.agendar-cita:hover {
+    background-color: #e59400;
+}
+
+/* Carrusel de imágenes */
+/* Carrusel de Imágenes */
+.carousel-item img {
+    width: 100%; 
+    height: 500px; /* Altura fija para uniformidad */
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); 
+    width: 30px;
+    height: 30px;
+    background-size: 100%; /* Asegura que el icono ocupe toda el área */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Sección de Servicios */
+.services {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.services-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.description h2 {
+    font-size: 36px;
+    color: #004080;
+}
+
+.services-text {
+    font-size: 18px;
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+    color: #333;
+}
+
+
+.service-features {
+    list-style: none;
+    padding: 0;
+}
+
+.service-features li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.service-features li i {
+    color: #FFA500;
+    margin-right: 10px;
+}
+
+.service-image {
+    flex: 1;
+    text-align: right;
+}
+
+/* Sección de Servicios */
+.service-image img {
+    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+    max-width: 500px; /* Controla el ancho máximo de la imagen */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+/* Botón de Servicios */
+.btn-view-services {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    color: white;
+    background-color: #FFA500;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-services:hover {
+    background-color: #e59400;
+}
+
+
+/* Preguntas Frecuentes (FAQ) */
+.faq {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.faq h2 {
+    font-size: 36px;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.accordion .card {
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion .card-header {
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.accordion .card-header button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.accordion .card-body {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Ícono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    background-color: #20b358;
+}
+
+
+/* Diferenciales de servicio (nueva sección) */
+.service-highlights {
+    padding: 40px 20px;
+    background-color: #004080;
+    color: white;
+}
+
+.service-highlights h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlights-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.highlight-item {
+    flex: 1;
+    text-align: center;
+    background-color: #003366;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: scale(1.05);
+}
+
+.highlight-item i {
+    font-size: 40px;
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+.highlight-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    font-size: 16px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #004080;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Secciones individuales */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #FFA500;
+}
+
+/* Mapa */
+.map iframe {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contactos */
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    margin-bottom: 10px;
+}
+
+/* Métodos de pago */
+.payments img {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.payments img:hover {
+    transform: scale(1.1);
+}

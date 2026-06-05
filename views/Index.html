@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabrisas Vasquez</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <script src="/public/js/index.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="main-header">
+    <nav class="nav-left">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/views/servicios.html">Servicios</a></li>
+            <li><a href="/views/contacto.html">Contacto</a></li> 
+        </ul>
+    </nav>
+    
+    <div class="logo">
+        <img src="/public/imagenes/Black and Red Auto Repair Logo.svg" class="logo" alt="logo">
+    </div>
+    
+    <nav class="nav-right">
+        <ul>
+            <li><a href="/views/agendar.html" class="agendar-cita">Agendar Cita</a></li>
+            <li>
+                <a href="/views/login.html" class="account-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="gradient-bar"></div>
+
+<div class="main-content">
+    
+<!-- Carrusel de imágenes -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/public/imagenes/bryan goma2.jpeg" class="d-block w-100 carousel-image" alt="Servicio 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Servicio Rápido y Eficiente</h5>
+                <p>Cambio de parabrisas en el momento que lo necesites.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/public/imagenes/bryan auto completo trasero.jpeg" class="d-block w-100 carousel-image" alt="Servicio 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Atención Personalizada</h5>
+                <p>Nos adaptamos a tus necesidades.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/public/imagenes/pedro-goma.jpeg" class="d-block w-100 carousel-image" alt="Servicio 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Calidad Garantizada</h5>
+                <p>Usamos solo los mejores materiales.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Controles de navegación del carrusel -->
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+
+<section class="services">
+    <div class="container">
+        <div class="services-content">
+            <div class="description">
+                <h2>Nuestros Servicios</h2>
+                <p class="services-text">
+                    En Parabrisas Vasquez, ofrecemos reparación y reemplazo de vidrios para todo tipo de automóviles. Nuestro equipo capacitado se compromete a ofrecer un servicio rápido y de calidad, para que puedas volver a la carretera con confianza.
+                </p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Servicio personalizado</li>
+                    <li><i class="fas fa-check-circle"></i> Calidad garantizada</li>
+                    <li><i class="fas fa-check-circle"></i> Atención rápida</li>
+                </ul>
+                <a href="/views/servicios.html" class="btn-view-services">Ver Todos los Servicios</a>
+            </div>
+            <div class="service-image">
+                <img src="/public/imagenes/reemplazo.jpg" alt="Servicio de Vidrios">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Nueva Sección: Diferenciales de Servicio -->
+<section class="service-highlights">
+    <div class="container">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <i class="fas fa-tools"></i>
+                <h3>Experiencia y Profesionalismo</h3>
+                <p>Contamos con años de experiencia en el sector, garantizando un servicio profesional en cada visita.</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Materiales de Calidad</h3>
+                <p>Usamos únicamente materiales de alta calidad para asegurar durabilidad y satisfacción del cliente.</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-thumbs-up"></i>
+                <h3>Satisfacción Garantizada</h3>
+                <p>Nos esforzamos por ofrecer un servicio que supere tus expectativas en cada detalle.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Preguntas Frecuentes -->
+<section class="faq">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cuánto tiempo tarda el reemplazo de un parabrisas?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        En promedio, el reemplazo de un parabrisas toma entre 1 y 2 horas, dependiendo del tipo de vehículo.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Ofrecen garantía en sus servicios?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Sí, todos nuestros servicios cuentan con una garantía de satisfacción para asegurar la calidad y seguridad.
+                    </div>
+                </div>
+            </div>
+            <!-- Más preguntas aquí -->
+        </div>
+    </div>
+</section>
+<!-- Ícono de WhatsApp -->
+<a href="https://wa.me/56922595199" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section map">
+            <h4>Ubicación</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.788626637288!2d-70.5612099849599!3d-33.60954138073511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d8fd5e795f3f%3A0xa86e146d2733d925!2sPuente%20Alto%2C%20Santiago%2C%20Chile!5e0!3m2!1sen!2scl!4v1694219795373!5m2!1sen!2scl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Contactos</h4>
+            <ul>
+                <li><strong>Pedro Vasquez:</strong> <span>(+56 9 xxx xxxx)</span></li>
+                <li><strong>Elias Vasquez:</strong> <span>(+56 9 xxx xxxx)</span></li>
+                <li><strong>Bryan franco:</strong> <span>(+56 9 xxx xxxx)</span></li>
+            </ul>
+        </div>
+
+        <div class="footer-section payments">
+            <h4>Métodos de Pago</h4>
+            <img src="Efectivo.png" alt="Efectivo" width="50">
+            <img src="Transferencia.png" alt="Transferencia" width="50">
+            
+        </div>
+    </div>
+</footer>
+
+<!-- Incluye Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

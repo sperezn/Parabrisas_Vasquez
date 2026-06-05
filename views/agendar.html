@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Parabrisas Vasquez</title>
+    <link rel="stylesheet" href="/public/css/agendar.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Mensaje emergente -->
+<div id="mensaje-exito" class="alert alert-success text-center" role="alert" style="display:none;">
+    Cita agendada exitosamente
+</div>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="nav-left">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/views/servicios.html">Servicios</a></li>
+            <li><a href="/views/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="logo">
+        <h1>Agendar cita</h1>
+    </div>
+
+    <nav class="nav-right">
+        <ul>
+         
+            <li><a href="/views/login.html" class="account-link"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="gradient-bar"></div>
+
+<!-- Main Content -->
+<div class="main-content container">
+    <div class="background-image"></div>
+    <div id="mensaje-exito" class="alert alert-success text-center" role="alert" style="display: none;">
+        Cita agendada exitosamente
+    </div> <!-- Imagen de fondo -->
+    
+
+    <div class="form-container">
+        <form id="form-agendar-cita" class="form-agendar-cita" method="POST">
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="telefono">Número de Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tipo-servicio">Tipo de Servicio</label>
+                    <select id="tipo-servicio" name="tipo_servicio" class="form-control" required>
+                        <option value="">Selecciona el tipo de servicio</option>
+                        <option value="cambio-completo">Cambio Completo de Parabrisas</option>
+                        <option value="reparacion-grieta">Reparación de Grieta</option>
+                        <option value="sellado">Sellado de Parabrisas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="vidrio-daniado">Vidrio Dañado</label>
+                    <select id="vidrio-daniado" name="vidrio_daniado" class="form-control" required>
+                        <option value="">Selecciona el vidrio dañado</option>
+                        <option value="frontal">Parabrisas Frontal</option>
+                        <option value="trasero">Parabrisas Trasero</option>
+                        <option value="lateral">Vidrio Lateral</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="tipo-vehiculo">Tipo de Vehículo</label>
+                    <input type="text" class="form-control" id="tipo-vehiculo" name="tipo_vehiculo" placeholder="Ej. SUV, Sedán, Camioneta" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="marca">Marca del Vehículo</label>
+                    <input type="text" class="form-control" id="marca" name="marca" placeholder="Ej. Toyota, Ford, Nissan" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fecha">Fecha de la Cita</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="hora">Hora de la Cita</label>
+                    <input type="time" class="form-control" id="hora" name="hora" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción del Problema</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Describe el problema que necesitas resolver" required></textarea>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-agendar">Confirmar Cita</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section map">
+            <h4>Ubicación</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.788626637288!2d-70.5612099849599!3d-33.60954138073511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d8fd5e795f3f%3A0xa86e146d2733d925!2sPuente%20Alto%2C%20Santiago%2C%20Chile!5e0!3m2!1sen!2scl!4v1694219795373!5m2!1sen!2scl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Contactos</h4>
+            <ul>
+                <li><strong>Jefe del Local:</strong> <span>(+56 9 xxx xxxx)</span></li>
+                <li><strong>Trabajador 1:</strong> <span>(+56 9 xxx xxxx)</span></li>
+                <li><strong>Trabajador 2:</strong> <span>(+56 9 xxx xxxx)</span></li>
+            </ul>
+        </div>
+
+        <div class="footer-section payments">
+            <h4>Métodos de Pago</h4>
+            <img src="Efectivo.png" alt="Efectivo" width="50">
+            <img src="Transferencia.png" alt="Transferencia" width="50">
+            
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/public/js/agendar.js"></script>
+
+</body>
+</html>
