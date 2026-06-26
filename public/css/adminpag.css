@@ -16,25 +16,24 @@ body {
 }
 
 
-/* Header */
+
 .main-header {
     background-color: #004080;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px; /* Aumenta el padding para hacerlo más prominente */
-    /* Mayor altura para resaltar */
+    padding: 50px; 
+    
 }
 
 
-/* Barra degradada debajo del header */
 .gradient-bar {
     height: 15px;
     background: linear-gradient(to right, #004080, #00BFFF, #640164); /* Degradado entre colores */
 }
 
-/* Estilos para el logo */
+
 .logo {
     position: absolute;
     left: 50%;
@@ -43,12 +42,12 @@ body {
 
 .logo h1 {
     margin: 0;
-    font-size: 42px; /* Tamaño ajustado para resaltar */
+    font-size: 42px; 
     font-weight: bold;
     text-align: center;
 }
 
-/* Enlaces del header */
+
 .nav-left, .nav-right {
     flex: 1;
 }
@@ -83,7 +82,7 @@ body {
     background-color: #00BFFF;
 }
 
-/* Botón "Agendar Cita" */
+
 .nav-right ul li a.agendar-cita {
     background-color: #FFA500;
     border-color: #FFA500;
@@ -95,7 +94,7 @@ body {
     background-color: #e59400;
 }
 
-/* Botón de Registrar Venta */
+
 .btn-agregar {
     background-color: #FFA500;
     color: white;
@@ -114,7 +113,7 @@ body {
     margin-top: 20px;
     border-radius: 10px;
 }
-/* Botones de acción para citas */
+
 .btn-aceptar, .btn-rechazar, .btn-sugerir {
     margin-right: 5px;
     transition: transform 0.2s ease;
@@ -135,7 +134,7 @@ body {
     background-color: #ffc107;
     color: white;
 }
-/* Estilos para el modal de confirmación */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -183,7 +182,7 @@ body {
 
 
 
-/* Indicador de estado del inventario */
+
 .table-dark .table-hover tr {
     transition: background-color 0.3s ease;
 }
@@ -194,15 +193,14 @@ body {
     background-color: #dc354566;
 }
 
-/* Sección de Finanzas - Efecto de confirmación */
+
 .btn-agregar:active {
     transform: scale(0.95);
     background-color: #e58200;
 }
 
 
-/* Footer */
-/* Footer */
+
 .main-footer {
     background-color: #004080;
     color: white;
@@ -225,7 +223,7 @@ body {
     text-align: center;
     font-weight: 600;
     margin-bottom: 20px;
-    text-transform: uppercase; /* Hace que el texto esté en mayúsculas */
-    letter-spacing: 1px; /* Añade un poco de espacio entre letras */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para destacar el título */
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }

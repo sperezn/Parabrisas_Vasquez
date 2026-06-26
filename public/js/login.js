@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     body: JSON.stringify(data)
                 });
 
-                // Verificar si la respuesta es exitosa
+                
                 if (!response.ok) {
                     let errorText = 'Error en el servidor';
                     try {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const result = await response.json();
 
-                // Redirige según el rol del usuario
+                
                 if (result.redirectUrl) {
                     window.location.href = result.redirectUrl;
                 } else {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } catch (error) {
                 console.error('Error en el inicio de sesión:', error);
 
-                // Mostrar mensaje de error en la página
+            
                 let errorMessage = document.getElementById('errorMessage');
                 if (!errorMessage) {
                     errorMessage = document.createElement('p');

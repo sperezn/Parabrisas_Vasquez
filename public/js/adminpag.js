@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencias a elementos DOM
+   
     const citasTable = document.querySelector('.admin-section tbody');
     const historialCitasTable = document.querySelector('#historialCitasTable tbody');
     const inventarioTable = document.getElementById('inventarioTable');
     const ventasTable = document.querySelector('.admin-section:last-child table tbody');
     
 
-    // === Citas CRUD ===
+   
     function cargarCitasPendientes() {
         fetch('/api/citas/pendientes')
             .then(response => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     tablaCitas.appendChild(row);
                 });
     
-                // Asignar eventos a los botones
+                
                 asignarEventosCitas();
             })
             .catch(error => console.error('Error al cargar citas pendientes:', error));
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(data => {
                 alert(data.message);
-                cargarCitasPendientes(); // Actualizar la tabla de citas pendientes
-                cargarHistorialCitas(); // Actualizar el historial
+                cargarCitasPendientes(); 
+                cargarHistorialCitas(); 
             })
             .catch(error => console.error('Error al actualizar cita:', error));
     }
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.error('No se encontró la tabla del historial de citas.');
                     return;
                 }
-                tablaHistorial.innerHTML = ''; // Limpia la tabla antes de añadir nuevas filas
+                tablaHistorial.innerHTML = ''; 
     
                 historial.forEach(cita => {
                     const row = document.createElement('tr');
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === Inventario CRUD ===
+  
     async function cargarInventario() {
         try {
             const response = await fetch('/api/inventario');
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     const data = {
-        producto: document.getElementById('producto').value,  // Asegúrate de que el ID coincida
+        producto: document.getElementById('producto').value,  
         cantidad: document.getElementById('cantidad').value,
         estado: document.getElementById('estado').value,
     };
@@ -222,16 +222,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelector('.btn-agregar-producto').addEventListener('click', async () => {
-        const producto = document.getElementById('producto').value.trim(); // Captura el valor del campo producto
-        const cantidad = parseInt(document.getElementById('cantidad').value); // Captura la cantidad
-        const estado = document.getElementById('estado').value; // Captura el estado
+        const producto = document.getElementById('producto').value.trim(); 
+        const cantidad = parseInt(document.getElementById('cantidad').value); 
+        const estado = document.getElementById('estado').value; 
      
         if (!producto || isNaN(cantidad)) {
             alert('Por favor, completa todos los campos.');
             return;
         }
      
-        console.log('Producto a enviar:', producto); // Debug para verificar el valor del producto
+        console.log('Producto a enviar:', producto); 
      
         try {
             const response = await fetch('/api/inventario', {
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
      
             alert('Producto agregado correctamente.');
-            cargarInventario(); // Recarga la tabla del inventario
+            cargarInventario(); 
         } catch (error) {
             console.error('Error al agregar producto:', error);
         }
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === Finanzas CRUD y Gráficos ===
+
     async function cargarVentas() {
         try {
             const response = await fetch('/api/ventas');
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Error al registrar la venta.');
     
             alert('Venta registrada exitosamente.');
-            cargarVentas(); // Recargar la lista de ventas
+            cargarVentas(); 
         } catch (error) {
             console.error('Error al registrar la venta:', error);
         }
@@ -341,12 +341,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    let ventasChart = null; // Declarar al inicio
+    let ventasChart = null; 
 
     function generarGraficoVentas(data) {
         const ctx = document.getElementById('ventasPorServicioChart').getContext('2d');
     
-        // Destruye el gráfico existente si ya existe
         if (ventasChart) {
             ventasChart.destroy();
         }
@@ -374,12 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-
-// Llama esta función con los datos para generar el gráfico
-
-    
-
-    // Inicialización
     cargarCitasPendientes();
     cargarHistorialCitas();
     cargarInventario();

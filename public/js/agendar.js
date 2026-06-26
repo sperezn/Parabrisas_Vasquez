@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Cambia el color del borde del input al recibir foco
+    
     document.querySelectorAll('.form-control').forEach((input) => {
         input.addEventListener('focus', function () {
             this.style.borderColor = '#FFA500';
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('DOMContentLoaded', async function () {
         const dateInput = document.getElementById('fecha');
     
-        // Bloquear días ocupados
+      
         async function bloquearDiasOcupados() {
             try {
                 const response = await fetch('/api/dias-ocupados');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const selectedDate = this.value;
                     if (diasOcupados.includes(selectedDate)) {
                         alert('Este día está completamente ocupado. Por favor, selecciona otro.');
-                        this.value = ''; // Limpiar fecha seleccionada
+                        this.value = ''; 
                     }
                 });
             } catch (error) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         bloquearDiasOcupados();
     });
     
-    // Validación y envío del formulario de manera asíncrona
+    
     const form = document.getElementById('form-agendar-cita');
     form.addEventListener('submit', async function (event) {
         event.preventDefault();
@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!isValid) return;
 
         const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries()); // Convertir FormData a objeto
+        const data = Object.fromEntries(formData.entries()); 
 
         try {
-            // Realizar solicitud POST al backend
+
             const response = await fetch('/schedule', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     mensajeExito.style.display = 'none';
                 }, 3000);
 
-                this.reset(); // Limpia el formulario
+                this.reset(); 
             } else {
                 alert('Error al agendar la cita. Inténtelo de nuevo.');
             }
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Función para mostrar errores temporales en los campos
+    
     function showTemporaryError(input, message) {
         input.style.borderColor = 'red';
         const errorMsg = document.createElement('small');
@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    // Cargar datos preexistentes desde el backend para edición (opcional)
+   
     async function cargarCitasExistentes() {
         try {
             const response = await fetch('/api/citas');
             if (response.ok) {
                 const citas = await response.json();
-                console.log('Citas cargadas:', citas); // Puedes utilizar estos datos según sea necesario
+                console.log('Citas cargadas:', citas); 
             } else {
                 console.error('Error al cargar citas existentes');
             }
@@ -106,6 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Llamada inicial para cargar citas si es necesario
+   
     cargarCitasExistentes();
 });

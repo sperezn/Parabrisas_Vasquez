@@ -1,10 +1,10 @@
-/* Contenedor principal del login */
+
 .login-container {
     display: flex;
     height: 100vh;
 }
 
-/* Sección de formulario */
+
 .login-form-section {
     flex: 1.6;
     display: flex;
@@ -47,7 +47,7 @@
     color: #FFA500;
 }
 
-/* Input con ícono */
+
 .input-icon {
     position: relative;
     display: flex;
@@ -62,7 +62,7 @@
 }
 
 .login-form-section .form-control {
-    padding: 15px 15px 15px 40px; /* Aumenta el padding para el ícono */
+    padding: 15px 15px 15px 40px; 
     font-size: 18px;
     border: 2px solid #FFA500;
     border-radius: 8px;
@@ -110,7 +110,7 @@
     text-decoration: underline;
 }
 
-/* Sección de imagen */
+
 .login-image-section {
     flex: 1;
     display: flex;
@@ -124,7 +124,7 @@
     object-fit: cover;
     border-radius: 0 10px 10px 0;
 }
-/* Enlace de registro */
+
 .register-link {
     margin-top: 20px;
     font-size: 16px;
@@ -147,10 +147,10 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 24px; /* Tamaño del ícono */
-    color: #FFA500; /* Color del ícono */
-    text-decoration: none; /* Quitar subrayado */
-    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    font-size: 24px; 
+    color: #FFA500; 
+    text-decoration: none; 
+    z-index: 1000; 
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -159,6 +159,6 @@
 }
 
 .home-icon:hover {
-    color: #00BFFF; /* Cambiar color al pasar el mouse */
-    transform: scale(1.1); /* Efecto de agrandamiento */
+    color: #00BFFF; 
+    transform: scale(1.1); 
 }

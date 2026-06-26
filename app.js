@@ -6,15 +6,15 @@ const db = require('./config/db');
 
 const app = express();
 
-// Middlewares básicos
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Configuración para servir archivos estáticos
+
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/views', express.static(path.join(__dirname, 'views')));
 
-// Ruta para manejar el login
+
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
@@ -45,7 +45,7 @@ app.post('/login', (req, res) => {
     });
 });
 
-// Ruta para registrar usuarios
+
 app.post('/register', async (req, res) => {
     const { nombre, apellido, usuario, email, celular, password, role = 'cliente' } = req.body;
 
@@ -74,7 +74,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
-// Ruta para registrar una cita
+
 app.post('/schedule', (req, res) => {
     const { nombre, email, telefono, tipo_servicio, vidrio_daniado, tipo_vehiculo, marca, fecha, hora, descripcion } = req.body;
 
@@ -97,7 +97,6 @@ app.post('/schedule', (req, res) => {
     });
 });
 
-// Ruta para obtener todas las citas pendientes
 app.get('/api/citas/pendientes', (req, res) => {
     const query = 'SELECT * FROM citas WHERE estado = "pendiente" ORDER BY fecha, hora';
 
@@ -110,7 +109,7 @@ app.get('/api/citas/pendientes', (req, res) => {
     });
 });
 
-// Ruta para obtener el historial de citas
+
 app.get('/api/historial-citas', (req, res) => {
     const query = `
         SELECT DISTINCT cliente, fecha, hora, servicio, accion 
@@ -164,7 +163,7 @@ app.put('/api/citas/:id', (req, res) => {
             return res.status(500).json({ message: 'Error al actualizar la cita.' });
         }
 
-        // Si el estado es aceptada, rechazada o fecha sugerida, mover al historial
+    
         if (['aceptada', 'rechazada', 'fecha_sugerida'].includes(estado)) {
             const historialQuery = `
                 INSERT INTO historial_citas (cliente, fecha, hora, servicio, accion)
@@ -185,7 +184,7 @@ app.put('/api/citas/:id', (req, res) => {
 
 
 
-// Ruta para obtener días completamente ocupados
+
 app.get('/api/dias-ocupados', (req, res) => {
     const query = `
         SELECT fecha, COUNT(*) AS total_citas
@@ -221,7 +220,7 @@ app.get('/api/inventario', (req, res) => {
 app.post('/api/inventario', (req, res) => {
     const { producto, cantidad, estado } = req.body;
 
-    console.log('Datos recibidos en el backend:', req.body); // Debug
+    console.log('Datos recibidos en el backend:', req.body); 
 
     if (!producto || cantidad == null || !estado) {
         return res.status(400).json({ message: 'Todos los campos son obligatorios.' });
@@ -258,7 +257,6 @@ app.delete('/api/inventario/:id', (req, res) => {
 });
 
 
-// Actualizar producto del inventario
 app.put('/api/inventario/:id', (req, res) => {
     const { id } = req.params;
     const { cantidad, estado } = req.body;
@@ -328,7 +326,7 @@ app.get('/api/ventas', (req, res) => {
 
 
 
-// Rutas genéricas para servir vistas HTML
+
 app.get('/views/:page', (req, res) => {
     const page = req.params.page;
     const filePath = path.join(__dirname, 'views', page);
@@ -341,17 +339,17 @@ app.get('/views/:page', (req, res) => {
     });
 });
 
-// Ruta para la página principal
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-// Manejador para rutas inexistentes (404)
+
 app.use((req, res) => {
     res.status(404).send('Página no encontrada');
 });
 
-// Iniciar servidor
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);

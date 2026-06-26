@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header */
+
 .main-header {
     background-color: #004080;
     color: white;
@@ -24,7 +23,7 @@ body {
     background: linear-gradient(to right, #004080, #00BFFF, #FFA500); /* Degradado entre colores */
 }
 
-/* Estilos para el logo */
+
 .logo img {
     max-width: 180px; 
     height: auto; 
@@ -38,7 +37,7 @@ body {
     text-align: center;
 }
 
-/* Enlaces del header */
+
 .nav-left, .nav-right {
     flex: 1;
 }
@@ -73,7 +72,7 @@ body {
     background-color: #00BFFF;
 }
 
-/* Botón "Agendar Cita" */
+
 .nav-right ul li a.agendar-cita {
     background-color: #FFA500;
     border-color: #FFA500;
@@ -85,11 +84,10 @@ body {
     background-color: #e59400;
 }
 
-/* Carrusel de imágenes */
-/* Carrusel de Imágenes */
+
 .carousel-item img {
     width: 100%; 
-    height: 500px; /* Altura fija para uniformidad */
+    height: 500px; 
     object-fit: cover; 
     border-radius: 8px; 
 }
@@ -99,7 +97,7 @@ body {
     filter: invert(1); 
     width: 30px;
     height: 30px;
-    background-size: 100%; /* Asegura que el icono ocupe toda el área */
+    background-size: 100%; 
 }
 
 .carousel-control-prev,
@@ -113,12 +111,11 @@ body {
     border-radius: 5px;
 }
 
-/* Sección de Servicios */
 .services {
     display: flex;
     align-items: center;
     padding: 60px 0;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff; 
 }
 
 .services-content {
@@ -139,7 +136,7 @@ body {
 .services-text {
     font-size: 18px;
     line-height: 1.7;
-    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+    font-family: 'Poppins', sans-serif; 
     color: #333;
 }
 
@@ -166,16 +163,15 @@ body {
     text-align: right;
 }
 
-/* Sección de Servicios */
+
 .service-image img {
-    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
-    max-width: 500px; /* Controla el ancho máximo de la imagen */
+    width: 100%; 
+    max-width: 500px; 
     border-radius: 8px;
     object-fit: cover;
 }
 
 
-/* Botón de Servicios */
 .btn-view-services {
     display: inline-block;
     margin-top: 20px;
@@ -192,7 +188,6 @@ body {
 }
 
 
-/* Preguntas Frecuentes (FAQ) */
 .faq {
     padding: 40px 20px;
     background-color: #f4f4f4;
@@ -233,7 +228,7 @@ body {
     font-size: 16px;
 }
 
-/* Ícono de WhatsApp */
+
 .whatsapp-icon {
     position: fixed;
     bottom: 20px;
@@ -254,7 +249,7 @@ body {
 }
 
 
-/* Diferenciales de servicio (nueva sección) */
+
 .service-highlights {
     padding: 40px 20px;
     background-color: #004080;
@@ -302,7 +297,7 @@ body {
     font-size: 16px;
 }
 
-/* Footer */
+
 .main-footer {
     background-color: #004080;
     color: white;
@@ -319,7 +314,7 @@ body {
     gap: 20px;
 }
 
-/* Secciones individuales */
+
 .footer-section {
     flex: 1;
     padding: 20px;
@@ -330,14 +325,13 @@ body {
     color: #FFA500;
 }
 
-/* Mapa */
 .map iframe {
     border: 0;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contactos */
+
 .contact ul {
     list-style: none;
     padding: 0;
@@ -347,7 +341,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Métodos de pago */
+
 .payments img {
     margin: 10px;
     transition: transform 0.3s ease;

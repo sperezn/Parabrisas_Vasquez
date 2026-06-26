@@ -3,10 +3,9 @@ const path = require('path');
 const mongoose = require('mongoose');
 const app = express();
 
-// Configuración de la carpeta de archivos estáticos (CSS, JS, Imágenes, etc.)
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-// Rutas para las vistas (HTML)
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
@@ -24,12 +23,12 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/agendar', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'servicios.html')); // Puedes tener otra página específica si es necesario
+    res.sendFile(path.join(__dirname, 'views', 'servicios.html')); 
 });
 
 app.use(express.json());
 
-// Conectar a la base de datos (esto lo explicaremos más abajo)
+
 mongoose.connect('mongodb://localhost/parabrisas_vasquez', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -37,10 +36,10 @@ mongoose.connect('mongodb://localhost/parabrisas_vasquez', {
 }).then(() => console.log('Conectado a la base de datos'))
   .catch(err => console.log(err));
 
-// Rutas
-app.use('/api/auth', require('./routes/auth')); // Registrar las rutas de autenticación
 
-// Levantar el servidor
+app.use('/api/auth', require('./routes/auth'));
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor en ejecución en el puerto ${PORT}`);

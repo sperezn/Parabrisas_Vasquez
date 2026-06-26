@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,9 +8,8 @@ body {
     min-height: 100vh;
 }
 
-/* Imagen de fondo */
 .background-image {
-    background-image: url('/public/imagenes/para2.jpg'); /* Coloca aquí tu imagen */
+    background-image: url('/public/imagenes/para2.jpg'); 
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -22,7 +21,7 @@ body {
     opacity: 0.8;
 }
 
-/* Header */
+
 .main-header {
     background-color: #004080;
     color: white;
@@ -38,7 +37,7 @@ body {
     background: linear-gradient(to right, #004080, #00BFFF, #FFA500);
 }
 
-/* Logo */
+
 .logo {
     position: absolute;
     left: 50%;
@@ -52,7 +51,7 @@ body {
     text-align: center;
 }
 
-/* Navegación */
+
 .nav-left ul, .nav-right ul {
     list-style: none;
     display: flex;
@@ -71,7 +70,6 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Animación hover para los enlaces */
 .nav-left ul li a:hover, .nav-right ul li a:hover {
     background-color: #00BFFF;
     transform: scale(1.05);
@@ -89,7 +87,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Título de Registro */
+
 h2.text-center.my-4 {
     font-size: 48px;
     font-weight: bold;
@@ -98,14 +96,14 @@ h2.text-center.my-4 {
     margin-bottom: 40px;
 }
 
-/* Formulario de Registro */
+
 .form-container {
     background-color: white;
     padding: 50px;
     margin: 40px auto;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    max-width: 900px; /* Más ancho para mostrar los inputs en horizontal */
+    max-width: 900px; 
     border: 2px solid #FFA500;
     position: relative;
 }
@@ -118,7 +116,7 @@ h2.text-center.my-4 {
 
 .form-group {
     margin-bottom: 25px;
-    flex: 1 1 45%; /* Dos columnas, ajustables */
+    flex: 1 1 45%; 
 }
 
 .form-control {
@@ -130,7 +128,7 @@ h2.text-center.my-4 {
     background-color: #f9f9f9;
 }
 
-/* Animación para inputs */
+
 .form-control:focus {
     border-color: #FFA500;
     background-color: #fff;
@@ -138,7 +136,7 @@ h2.text-center.my-4 {
     transform: scale(1.05);
 }
 
-/* Botón de registro con animación */
+
 .btn-register {
     background-color: #FFA500;
     border: none;
@@ -154,11 +152,11 @@ h2.text-center.my-4 {
 
 .btn-register:hover {
     background-color: #e59400;
-    transform: scale(1.1); /* Animación en hover */
+    transform: scale(1.1); 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
+
 .main-footer {
     background-color: #004080;
     color: white;
@@ -209,13 +207,13 @@ h2.text-center.my-4 {
     transform: scale(1.1);
 }
 
-/* Estilos para la alerta personalizada */
+
 .custom-alert-container {
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1050; /* Encima de otros elementos */
+    z-index: 1050; 
 }
 
 .custom-alert {

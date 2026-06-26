@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
 const User = require('../models/User');
 
-// Ruta para el registro de usuario
+
 router.post('/register', [
     check('name', 'El nombre es obligatorio').not().isEmpty(),
     check('email', 'Por favor ingrese un correo válido').isEmail(),
@@ -30,7 +30,7 @@ router.post('/register', [
             password
         });
 
-        // Encriptar la contraseña antes de guardarla
+       
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
 
@@ -45,7 +45,7 @@ router.post('/register', [
 });
 
 module.exports = router;
-// Ruta para login de usuario
+
 router.post('/login', [
     check('email', 'Por favor ingrese un correo válido').isEmail(),
     check('password', 'La contraseña es obligatoria').exists()
@@ -64,7 +64,7 @@ router.post('/login', [
             return res.status(400).json({ msg: 'Credenciales inválidas' });
         }
 
-        // Verificar la contraseña
+       
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(400).json({ msg: 'Credenciales inválidas' });
