@@ -25,50 +25,50 @@ Durante el desarrollo, las páginas fueron visualizadas y probadas mediante **Li
 
 ### 🏠 Página de Inicio
 
-![Home](screenshots/Home.png)
+![Home](Screenshots/Home.png)
 
-![Home 2](screenshots/Home_2.png)
+![Home 2](Screenshots/Home_2.png)
 
-![Home 3](screenshots/Home_3.png)
+![Home 3](Screenshots/Home_3.png)
 
-![Home 4](screenshots/Home_4.png)
+![Home 4](Screenshots/Home_4.png)
 
 ---
 
 ### 🔧 Servicios
 
-![Servicios](screenshots/Servicio.png)
+![Servicios](Screenshots/Servicio.png)
 
-![Servicios 2](screenshots/Servicio_2.png)
+![Servicios 2](Screenshots/Servicio_2.png)
 
 
-![Servicios 3](screenshots/Servicio_3.png)
+![Servicios 3](Screenshots/Servicio_3.png)
 
-![Servicios 4](screenshots/Servicio_4.png)
+![Servicios 4](Screenshots/Servicio_4.png)
 
 ---
 
 ### 📅 Agendamiento de citas
 
-![Agendar](screenshots/AgendarCita.png)
+![Agendar](Screenshots/AgendarCita.png)
 
 ---
 
 ### 📞 Contacto
 
-![Contacto](screenshots/Contacto.png)
+![Contacto](Screenshots/Contacto.png)
 
 ---
 
 ### 🔐 Inicio de sesión
 
-![Login](screenshots/Login.png)
+![Login](Screenshots/Login.png)
 
 ---
 
 ### 👤 Registro de usuarios
 
-![Registro](screenshots/Registro.png)
+![Registro](Screenshots/Registro.png)
 
 ---
 
